@@ -10,16 +10,24 @@ const Container = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* align-items: center; */
   width: 30%;
+  box-sizing: border-box;
+  @media (max-width: 700px) {
+    margin: 1rem auto;
+    width: 90%;
+  }
 `;
 const Title = styled.h3`
   padding: 0.5rem;
 `;
 const TaskList = styled.div`
+  flex-grow: 1;
   padding: 0.5rem;
-  background: ${props => (props.isDraggingOver ? 'lightgrey' : 'white')};
+  transition: background-color 0.3s ease-in-out;
+  background-color: ${props => (props.isDraggingOver ? "lightgrey" : "white")};
+  min-height: 100px;
 `;
 
 export default class Column extends Component {

@@ -8,7 +8,8 @@ const Container = styled.div`
   border: 3px solid lightblue;
   border-radius: 4px;
   display: flex;
-  background: ${props => (props.isDragging ? 'lightblue' : 'white')};
+  transition: background-color 0.3s ease-in-out;
+  background-color: ${props => (props.isDragging ? 'lightblue' : 'white')};
   font-weight: 500;  
 `;
 
