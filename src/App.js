@@ -103,7 +103,7 @@ class App extends Component {
           <Droppable
             droppableId="all columns"
             type="columns"
-            direction="horizontal"
+            direction={window.innerWidth > 700 ? 'horizontal' : 'vertical'}
           >
             {provided => (
               <Container {...provided.droppableProps} ref={provided.innerRef}>
